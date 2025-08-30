@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges - CTF Arena</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <h1><a href="index.html">CTF Arena</a></h1>
+            </div>
+            <div class="nav-links">
+                <span id="welcomeUser"></span>
+                <a href="leaderboard.html" class="btn btn-secondary">Leaderboard</a>
+                <a href="index.html" id="logoutBtn" class="btn btn-outline">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Challenges</h1>
+            
+            <div class="level-section">
+                <h2>Beginner Level</h2>
+                <div class="challenges-grid" id="cyberChallenges"></div>
+            </div>
+
+            <div class="level-section">
+                <h2>Intermediate Level</h2>
+                <div class="challenges-grid" id="intermediateChallenges"></div>
+            </div>
+
+            <div class="level-section">
+                <h2>Advanced Level</h2>
+                <div class="challenges-grid" id="advancedChallenges"></div>
+            </div>
+        </div>
+
+        <!-- Challenge Modal -->
+        <div id="challengeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <div id="modalDescription"></div>
+                <div class="flag-submission">
+                    <input type="text" id="flagInput" placeholder="Enter flag here..." />
+                    <button id="submitFlag" class="btn btn-primary">Submit Flag</button>
+                </div>
+                <div id="submissionStatus"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/challenges.js"></script>
+</body>
+</html>
