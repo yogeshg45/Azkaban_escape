@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #0f0f23;
+    color: #cccccc;
+}
+
+/* Header Styles */
+header {
+    background: #1a1a3a;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-brand h1 {
+    color: #00ff41;
+}
+
+.nav-brand a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #00ff41;
+    color: #0f0f23;
+}
+
+.btn-primary:hover {
+    background: #00cc33;
+}
+
+.btn-secondary {
+    background: #666;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #777;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+}
+
+.btn-outline:hover {
+    background: #00ff41;
+    color: #0f0f23;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a3a, #0f0f23);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #00ff41;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 0;
+    background: #1a1a3a;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #00ff41;
+    font-size: 2.5rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #2a2a4a;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.feature-card h3 {
+    color: #00ff41;
+    margin-bottom: 1rem;
+}
+
+/* Login Form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.login-form {
+    background: #1a1a3a;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h2 {
+    color: #00ff41;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #2a2a4a;
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #00ff41;
+}
+
+/* Challenge Styles */
+.level-section {
+    margin-bottom: 3rem;
+}
+
+.level-section h2 {
+    color: #00ff41;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.challenge-card {
+    background: #1a1a3a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.challenge-card:hover {
+    border-color: #00ff41;
+    box-shadow: 0 4px 8px rgba(0, 255, 65, 0.2);
+    transform: translateY(-2px);
+}
+
+.challenge-card.solved {
+    border-color: #00ff41;
+    background: #1a2a1a;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.challenge-card h3 {
+    color: #00ff41;
+    margin-bottom: 0.5rem;
+}
+
+.challenge-points {
+    color: #ffff00;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.challenge-description {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.challenge-category {
+    color: #888;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1a1a3a;
+    margin: 2% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    position: relative;
+    overflow-y: auto;
+    border: 1px solid #00ff41;
+    box-shadow: 0 8px 32px rgba(0, 255, 65, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: #00ff41;
+    transform: scale(1.1);
+}
+
+/* Enhanced scrollable resources container */
+.challenge-resources {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #00ff41;
+    border-radius: 8px;
+    background: rgba(0, 255, 65, 0.05);
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar styling */
+.challenge-resources::-webkit-scrollbar {
+    width: 8px;
+}
+
+.challenge-resources::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.challenge-resources::-webkit-scrollbar-thumb {
+    background: #00ff41;
+    border-radius: 4px;
+}
+
+.challenge-resources::-webkit-scrollbar-thumb:hover {
+    background: #00cc33;
+}
+
+.resource-section {
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 3px solid #00ff41;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.resource-section:hover {
+    background: rgba(0, 255, 65, 0.1);
+    transform: translateX(5px);
+}
+
+.resource-section h4 {
+    color: #00ff41;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.challenge-text {
+    background: #000;
+    color: #00ff41;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    border: 1px solid #333;
+    max-height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.challenge-text::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.challenge-text::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.challenge-text::-webkit-scrollbar-thumb {
+    background: #00ff41;
+    border-radius: 3px;
+}
+
+.challenge-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 255, 65, 0.3);
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 1px solid #00ff41;
+}
+
+.challenge-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 255, 65, 0.4);
+}
+
+.challenge-audio {
+    border-radius: 6px;
+    background: #000;
+    width: 100%;
+    outline: none;
+    border: 1px solid #00ff41;
+}
+
+.challenge-audio::-webkit-media-controls-panel {
+    background-color: #000;
+}
+
+/* Resource loading indicator */
+.resource-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #00ff41;
+    font-style: italic;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.resource-error {
+    color: #ff4444;
+    font-style: italic;
+    padding: 10px;
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 4px;
+    border: 1px solid #ff4444;
+}
+
+/* Image modal for full-size viewing */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.image-modal img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 95%;
+    max-height: 95%;
+    border: 2px solid #00ff41;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
+}
+
+.image-modal .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.image-modal .close-modal:hover {
+    background: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    transform: scale(1.1);
+}
+
+.flag-submission {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+.flag-submission input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #2a2a4a;
+    color: #cccccc;
+    font-family: 'Courier New', monospace;
+}
+
+.flag-submission input:focus {
+    outline: none;
+    border-color: #00ff41;
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    background: #1a1a3a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#leaderboardTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#leaderboardTable th {
+    background: #2a2a4a;
+    color: #00ff41;
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+#leaderboardTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+#leaderboardTable tr:hover {
+    background: #2a2a4a;
+}
+
+/* Footer */
+footer {
+    background: #1a1a3a;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    color: #888;
+}
+
+/* Security Warning Styles */
+#devtools-warning {
+    animation: warning-pulse 2s infinite;
+}
+
+@keyframes warning-pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+/* Submission Status Styles */
+#submissionStatus {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Enhanced Form Styles */
+input[type="text"], input[type="email"], input[type="password"] {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 255, 65, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .flag-submission {
+        flex-direction: column;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 1rem;
+    }
+    
+    .challenge-resources {
+        max-height: 300px;
+        padding: 10px;
+    }
+    
+    .resource-section {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .challenge-text {
+        font-size: 11px;
+        padding: 10px;
+        max-height: 150px;
+    }
+    
+    .challenge-image {
+        max-height: 200px;
+    }
+    
+    .resource-section h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 98%;
+        margin: 2% auto;
+        max-height: 95vh;
+    }
+    
+    .challenge-resources {
+        max-height: 250px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    nav {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Additional smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for better UX */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.challenge-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.resource-section {
+    animation: fadeIn 0.3s ease-out;
+}
